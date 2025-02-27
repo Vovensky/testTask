@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "moduleResolution": "nodeNext",
+        "esModuleInterop": true,
+        "module": "NodeNext",
+        "target": "esnext",
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        "plugins": [
+            {
+              "name": "typescript-plugin-css-modules"
+            }
+          ]
+    },
+    "include": ["src/**/*", "declaration.d.ts"],
+    "exclude": ["node_modules", "dist"]
+}
+  
