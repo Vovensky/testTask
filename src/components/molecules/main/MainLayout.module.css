@@ -1,0 +1,19 @@
+.mainLayout {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 85px auto;
+    background-color: inherit;
+}
+
+.mainLayout__Content {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding: 19.5px 36px;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 16px;
+    background-color: rgba(6, 8, 12, 1);
+    margin-bottom: 12px;
+}

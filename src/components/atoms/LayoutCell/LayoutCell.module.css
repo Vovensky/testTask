@@ -1,0 +1,42 @@
+.mainLayout__Cell {
+    display: flex;
+}
+
+.mainLayout__Cell:first-child {
+    justify-content: start;
+    flex-grow: 2;
+}
+
+.mainLayout__Cell:last-child {
+    flex-grow: 2;
+    justify-content: end
+}
+
+.matchStatus {
+    font-size: 12px;
+    line-height: 14.5px;
+    border-radius: 5px;
+}
+
+.matchStatus_score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.matchStatus_live {
+    padding: 6px 34px;
+    background-color: green;
+}
+
+.matchStatus_finished {
+    padding: 6px 21px;
+    background-color: red;
+}
+
+.matchStatus_container {
+    display: block;
+}

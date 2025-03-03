@@ -1,12 +1,25 @@
 import styles from './css/app.module.css'
 import { useEffect, useState } from 'react'
+import { Header } from './components/molecules/header/header'
+import { MainLayout } from './components/molecules/main/MainLayout'
+
 
 export const App = () => {
-    useEffect(() => {
-        console.log(process.env.REACT_APP_BASE_URL)
-    }, [])
-
     return (
-        <h1> Test idi nahyi </h1>
+        <>
+           <Header />
+           <MainLayout />
+            {/* <main >
+                {
+                    matches.data.map(element => {
+                        return (
+                            <div>
+                                {element.awayScore}
+                            </div>
+                        )
+                    })
+                }
+            </main> */}
+        </>
     )
 };

@@ -1,0 +1,29 @@
+.buttonWrapper {
+    display: block;
+    position: relative;
+}
+
+.updateButton {
+    background-color: rgba(235, 2, 55, 1);
+    width: 204px;
+    height: 56px;
+    border: none;
+    color: inherit;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.updateButton_text {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.updateButton_icon {
+    width: 26px;
+    height: 26px;
+}

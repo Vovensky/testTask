@@ -1,0 +1,14 @@
+.errorMessage {
+    display: flex;
+    padding: 17px 24px 17px 27.5px;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(15, 19, 24, 1);
+}
+
+.errorMessage_text {
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 22px;
+}
