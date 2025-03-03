@@ -1,62 +1,16 @@
-import { useState, useEffect} from 'react'
 import Score from '../../atoms/LayoutCell/LayoutCell.score'
 import TeamName from '../../atoms/LayoutCell/LayoutCell.teamName'
 import MatchStatus from '../../atoms/LayoutCell/LayoutCell.status'
+import { MatchesData } from '../../../types/models'
 import styles from './MainLayout.module.css'
 
-type Ok = boolean | null
-
-type Data = Match[] | null 
-
-type MatchesData = {
-    data?: Data,
-    ok: Ok,
-    message?: string,
-    once?: boolean,
+type Props = {
+    matches: MatchesData,
 }
 
-type Match = {
-    awayScore: number,
-    awayTeam: Team,
-    homeTeam: Team,
-    homeScore: number,
-    status: string,
-} 
+export const MainLayout = (props: Props) => {
 
-type Team = {
-    name: string,
-    place: number,
-    players: Player[]
-}
-
-
-type Player = {
-    kills: number,
-    username: string,
-}
-
-export const MainLayout = () => {
-
-    const [matches, setMatches] = useState<MatchesData>({ok: false, once: true})
-    
-    useEffect(() => {
-        if(matches.once) {
-            (async function () {
-                try {
-                    const data = await fetch(`${process.env.BASE_URL}/fronttemp`)
-                    if(!data.ok) throw Error('Произошла неизвестная ошибка, попробуйте позже')
-    
-                        
-                    const  cleanData = await data.json()
-    
-                    setMatches({ok: cleanData.ok, data: cleanData.data.matches})
-    
-                } catch(err: any) {
-                    setMatches({ok: false, message: `Упс! ${err.message}`})
-                }
-                })()
-            }
-        }, [])
+    const matches = props.matches
     
         if(!matches.ok) {
             return (

@@ -68,10 +68,6 @@ module.exports = (env) => {
       new Dotenv({
         path: './.env.development'
       }),
-      // new Dotenv()
-      // new webpack.DefinePlugin({
-      //   'process.env': JSON.stringify(process.env)
-      // })
     ],
     devServer: {
       static: './dist',
