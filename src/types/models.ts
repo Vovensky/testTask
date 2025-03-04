@@ -9,7 +9,7 @@ export type MatchesData = {
     once?: boolean,
 }
 
-type Match = {
+export type Match = {
     awayScore: number,
     awayTeam: Team,
     homeTeam: Team,

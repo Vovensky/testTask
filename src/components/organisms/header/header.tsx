@@ -1,5 +1,5 @@
 import { Label } from "../../atoms/label/Label"
-import UpdatePanel from "../updatePanel/updatePanel"
+import UpdatePanel from "../../molecules/updatePanel/updatePanel"
 import styles from './header.module.css'
 
 export const Header = () => {

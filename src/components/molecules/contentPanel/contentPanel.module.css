@@ -1,12 +1,4 @@
-.mainLayout {
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin: 85px auto;
-    background-color: inherit;
-}
-
-.mainLayout__Content {
+.contentPanel {
     align-items: center;
     display: flex;
     width: 100%;
