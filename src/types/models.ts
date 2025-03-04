@@ -24,7 +24,7 @@ type Team = {
 }
 
 
-type Player = {
+export type Player = {
     kills: number,
     username: string,
 }

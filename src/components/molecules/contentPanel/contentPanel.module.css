@@ -1,6 +1,5 @@
 .contentPanel {
-    align-items: center;
-    display: flex;
+    display: block;
     width: 100%;
     padding: 19.5px 36px;
     font-weight: 600;
@@ -8,4 +7,21 @@
     font-size: 16px;
     background-color: rgba(6, 8, 12, 1);
     margin-bottom: 12px;
+}
+
+
+.contentPanel__commonInfo {
+    align-items: center;
+    display: flex;
+}
+
+.contentPanel__additionalInfo {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+}
+
+.contentPanel__teamCompound {
+    display: block;
+    width: 100%;
 }

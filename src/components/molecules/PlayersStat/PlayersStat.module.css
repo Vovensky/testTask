@@ -1,0 +1,17 @@
+.teamCompound {
+    display: block;
+    width: 100%;
+}
+
+.statContainer {
+    display: flex;
+    gap: 8px;
+
+}
+
+.statElement {
+    display: flex;
+    flex: 1;
+    padding: 8px 24px;
+    gap: 8px;
+}

@@ -24,6 +24,14 @@ module.exports = (env) => {
     module: {
       rules: [
         {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
+        {
           test: /\.tsx?$/,
           loader: 'ts-loader',
           exclude: /node_modules/,
