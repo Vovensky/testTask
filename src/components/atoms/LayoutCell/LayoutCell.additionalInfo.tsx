@@ -1,21 +1,22 @@
 import styles from './LayoutCell.module.css'
+import classes from '../../molecules/PlayersStat/PlayersStat.module.css'
 
 type Props = {
     label: string,
-    killCount: number,
+    value: number,
 
 }
 
 export default function AdditionalInfo(props: Props) {
-    const playerScore = props.killCount || 0
+    const value = props.value || 0
     const label = props.label
 
     return (
-        <div className={styles.infoContainer}>
+        <div className={`${styles.infoContainer} ${classes.statElement}`}>
             <span className={styles.additionalInfo__text}>
                 {label}:
             </span>
-            {playerScore}
+            {value}
         </div>
     )
 } 

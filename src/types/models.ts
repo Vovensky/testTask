@@ -15,12 +15,15 @@ export type Match = {
     homeTeam: Team,
     homeScore: number,
     status: string,
+
 } 
 
 type Team = {
     name: string,
     place: number,
-    players: Player[]
+    players: Player[],
+    points: number,
+    total_kills: number,
 }
 
 

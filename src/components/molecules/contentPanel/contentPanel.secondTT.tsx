@@ -29,7 +29,7 @@ export default function ContentPanelFinal(props: Props) {
                 <TeamName teamName={match.homeTeam.name} />
             </div>
             <div className={styles.contentPanel__additionalInfo}>
-                <PlayerStat playersData={players} />
+                <PlayerStat playersData={players} additionalData={props.match} />
             </div>
         </div>
     )

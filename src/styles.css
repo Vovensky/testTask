@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(11,14,18,1);
     color: white;
     padding: 53px 42px
