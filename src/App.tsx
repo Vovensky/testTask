@@ -24,30 +24,30 @@ export const App = () => {
             wrappedFetchData(null)
         }
 
-        let newSocket = new WebSocket(`${process.env.SOCKET_URL}`)
+        // let newSocket = new WebSocket(`${process.env.SOCKET_URL}`)
 
-        newSocket.onopen = () => {
-            console.log('Connected');
-          };
+        // newSocket.onopen = () => {
+        //     console.log('Connected');
+        //   };
 
-        newSocket.onmessage = (event) => {
-            const data = JSON.parse(event.data)
-            setMatches({ok: true, data: data.data})
-          };
+        // newSocket.onmessage = (event) => {
+        //     const data = JSON.parse(event.data)
+        //     setMatches({ok: true, data: data.data})
+        //   };
       
-        newSocket.onclose = () => {
-            console.log('Disconnect');
-          };
+        // newSocket.onclose = () => {
+        //     console.log('Disconnect');
+        //   };
       
-        newSocket.onerror = (error) => {
-            setMatches({ok: true, message: 'Something go wrong'})
-            console.error('WebSocket error:', error);
-          };
+        // newSocket.onerror = (error) => {
+        //     setMatches({ok: true, message: 'Something go wrong'})
+        //     console.error('WebSocket error:', error);
+        //   };
 
-        return () => {
-            console.log(`destruction`)
-            newSocket.close();
-          };
+        // return () => {
+        //     console.log(`destruction`)
+        //     newSocket.close();
+        //   };
 
         }, [])
 

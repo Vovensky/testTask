@@ -1,12 +1,20 @@
 .contentPanel {
     display: block;
+    position: relative;
     width: 100%;
+    height: 87px;
     padding: 19.5px 36px;
     font-weight: 600;
     line-height: 20px;
     font-size: 16px;
     background-color: rgba(6, 8, 12, 1);
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
+    transition: height 1s;
+    overflow: hidden;
+}
+
+.contentPanel_opened {
+    height: 255px;
 }
 
 
@@ -20,9 +28,28 @@
     display: flex;
     gap: 32px;
     width: 100%;
+    transition: visibility 0.5s;
+}
+
+.contentPanel__additionalInfo_hidden{
+    visibility: hidden
 }
 
 .contentPanel__teamCompound {
     display: block;
     width: 100%;
+}
+
+.contentPanel__icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 1s;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentPanel__icon_open {
+    transform: rotate(180deg)
 }

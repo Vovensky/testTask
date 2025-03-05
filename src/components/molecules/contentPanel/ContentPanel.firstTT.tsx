@@ -1,4 +1,5 @@
 import { Match } from "../../../types/models"
+
 import MatchStatus from "../../atoms/LayoutCell/LayoutCell.status"
 import TeamName from "../../atoms/LayoutCell/LayoutCell.teamName"
 import Score from "../../atoms/LayoutCell/LayoutCell.score"
