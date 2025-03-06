@@ -1,0 +1,417 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap);
+.label-module__label {
+    color: white;
+    font-family: 'Tactic Sans';
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+    .label-module__label {
+        width: 100%;
+        text-align: center;
+    }
+}
+.updatePanel-module__updatePanel {
+    display: flex;
+    max-height: 56px;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .updatePanel-module__updatePanel {
+        width: 100%;
+    }
+}
+
+.UpdateButton-module__buttonWrapper {
+    display: block;
+    position: relative;
+}
+
+.UpdateButton-module__updateButton {
+    background-color: rgba(235, 2, 55, 1);
+    width: 204px;
+    height: 56px;
+    border: none;
+    color: inherit;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.UpdateButton-module__updateButton_text {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.UpdateButton-module__updateButton_icon {
+    width: 26px;
+    height: 26px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .UpdateButton-module__buttonWrapper {
+        width: 100%
+    }
+    
+    .UpdateButton-module__updateButton {
+        width: 100%;
+    }
+}
+.ErrorMessage-module__errorMessage {
+    display: flex;
+    padding: 17px 24px 17px 27.5px;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(15, 19, 24, 1);
+}
+
+.ErrorMessage-module__errorMessage_text {
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 22px;
+}
+.CustomSelect-module__customSelect {
+    position: relative;
+    color: rgba(180, 181, 182, 1);
+    background-color: rgba(11, 14, 18, 1);
+    width: 170px;
+}
+
+.CustomSelect-module__customSelect__header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.CustomSelect-module__customSelect__item {
+    font-family: 'Inter';
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 16px;
+    width: 100%;
+}
+
+.CustomSelect-module__iconContainer {
+    width: 20px;
+    height: 20px;
+}
+
+.CustomSelect-module__customSelect__body {
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    color: white;
+}
+
+.CustomSelect-module__customSelect:hover {
+    cursor: pointer;
+}
+
+.CustomSelect-module__customSelect:hover > .CustomSelect-module__customSelect__body {
+    display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+    .CustomSelect-module__customSelect {
+        width: 100%;
+    }
+}
+.header-module__header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    color: white;
+    max-height: 56px;
+    margin: 0 auto;
+    max-width: 1920px;
+    margin-bottom: 33px;
+}
+
+@media screen and (max-width: 600px) {
+    .header-module__header {
+        flex-direction: column;
+        max-height: none;
+    }
+}
+.MainLayout-module__mainLayout {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    background-color: inherit;
+}
+
+
+@media screen and (max-width: 768px) {
+    .MainLayout-module__mainLayout {
+        margin: 0;
+        padding: 0;
+    }
+}
+.LayoutCell-module__mainLayout__Cell {
+    display: flex;
+}
+
+.LayoutCell-module__mainLayout__Cell:first-child {
+    justify-content: start;
+    flex: 2
+}
+
+.LayoutCell-module__mainLayout__Cell:nth-child(3){
+    flex: 2;
+    justify-content: end
+}
+
+.LayoutCell-module__matchStatus {
+    font-size: 12px;
+    line-height: 14.5px;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+}
+
+.LayoutCell-module__matchStatus_score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    transition: opacity 0.5s
+}
+
+.LayoutCell-module__matchStatus_live {
+
+    padding: 6px 34px;
+    background-color: green;
+}
+
+.LayoutCell-module__matchStatus_finished {
+
+    padding: 6px 21px;
+    background-color: red;
+}
+
+.LayoutCell-module__matchStatus_scheduled {
+    background-color: yellowgreen;
+    padding: 6px 21px;
+}
+
+.LayoutCell-module__matchStatus_container {
+    display: block;
+}
+
+.LayoutCell-module__infoContainer{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative
+}
+
+.LayoutCell-module__statContainer {
+    padding: 8px 24px
+}
+
+.LayoutCell-module__info__playerName {
+    line-height: 24px;
+}
+
+.LayoutCell-module__additionalInfo__label {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(250, 250, 250, 0.4);
+    font-weight: 400;
+    font-family: 'Inter';
+    margin-right: 8px;
+}
+
+.LayoutCell-module__additionalInfo__text {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.LayoutCell-module__text_hidden {
+    opacity: 0;
+}
+  
+.LayoutCell-module__text_visible {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .LayoutCell-module__additionalInfo__text, .LayoutCell-module__info__playerName {
+        font-size: 14px;
+    }
+
+    .LayoutCell-module__additionalInfo__label {
+        font-size: 12px;
+    } 
+}
+.contentPanel-module__contentPanel {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 87px;
+    margin: 20px 16px;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 16px;
+    background-color: rgba(11, 14, 18, 1);
+    margin-bottom: 12px;
+    transition: height 1s;
+    overflow: hidden;
+
+}
+
+.contentPanel-module__contentPanel_opened {
+    height: auto;
+}
+
+.contentPanel-module__contentPanel__commonInfo {
+    align-items: center;
+    display: flex;
+    margin-bottom: 32px;
+    padding: 16px;
+}
+
+.contentPanel-module__contentPanel__additionalInfo {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    transition: visibility 0.5s;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.contentPanel-module__contentPanel__additionalInfo_hidden{
+    visibility: hidden
+}
+
+.contentPanel-module__contentPanel__teamCompound {
+    display: block;
+    width: 100%;
+}
+
+.contentPanel-module__contentPanel__icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 1s;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentPanel-module__contentPanel__icon_open {
+    transform: rotate(180deg)
+}
+
+@media screen and (max-width: 768px) {
+    .contentPanel-module__contentPanel__additionalInfo {
+        flex-direction: column;
+        padding: 5px
+    }
+
+    .contentPanel-module__contentPanel {
+        margin: 8px 0px;
+    }
+}
+
+.PlayersStat-module__teamCompound {
+    display: block;
+    width: 100%;
+}
+
+.PlayersStat-module__statContainer {
+    display: flex;
+    gap: 8px;
+
+}
+
+.PlayersStat-module__statElement {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 14px 24px;
+}
+
+@media screen and (max-width: 1680px) {
+    .PlayersStat-module__statContainer {
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .PlayersStat-module__statContainer {
+        flex-direction: row
+    }
+
+    .PlayersStat-module__statElement {
+        flex-direction: column;
+        padding: 12px 7px;
+    }
+}
+.UserAvatar-module__info__image {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.UserAvatar-module__imageFrame {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: -5px
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: rgba(6, 8, 12, 1)
+}
+
+#root {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    color: white;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 42px
+}
+
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url(40a767b2573660da3a20.woff);
+}
+
+
+@media screen and (max-width: 768px) {
+    #root {
+        padding: 12px;
+        margin-top: 0px;
+        width: 100%;
+    }
+}
