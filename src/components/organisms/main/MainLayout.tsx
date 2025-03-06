@@ -41,9 +41,9 @@ export const MainLayout = (props: Props) => {
             {
                 matches.data.
                 filter((element) => element.status === filter.key).
-                map(element => {
+                map((element, index) => {
                     return (
-                        <Component match={element} />
+                        <Component match={element} key={index}/>
                         )
                 })
             }
