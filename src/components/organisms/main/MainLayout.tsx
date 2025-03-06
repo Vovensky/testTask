@@ -1,3 +1,5 @@
+import { ContextProvider } from '../../../App'
+import { useContext } from 'react'
 import { MatchesData } from '../../../types/models'
 import styles from './MainLayout.module.css'
 import React from 'react'
@@ -11,16 +13,40 @@ export const MainLayout = (props: Props) => {
 
     const matches = props.matches
     const Component = props.Component
+    const filter = useContext(ContextProvider).filter
+
+    console.log(`Filter`, filter)
     
         if(!matches.ok) {
             return (
                 <div>{ matches.message || `Данные пока отсутствуют, но скоро появятся`}</div>
             )
         }
+
+        if(filter.key === 'All') {
+            return (
+                <div className={styles.mainLayout}>
+                    {
+                        matches.data.
+                        map(element => {
+                            return (
+                                <Component match={element} />
+                                )
+                        })
+                    }
+                </div>
+            )
+        }
+
+        console.log(matches.data.
+            filter((element) => element.status === filter.key))
+
     return (
         <div className={styles.mainLayout}>
             {
-                matches.data.map(element => {
+                matches.data.
+                filter((element) => element.status === filter.key).
+                map(element => {
                     return (
                         <Component match={element} />
                         )

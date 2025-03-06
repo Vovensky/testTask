@@ -1,4 +1,5 @@
 .updatePanel {
     display: flex;
     max-height: 56px;
+    margin-left: auto;
 }

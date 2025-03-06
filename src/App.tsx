@@ -6,6 +6,7 @@ import ContentPanelFinal from './components/molecules/contentPanel/contentPanel.
 import { MatchesData } from './types/models'
 import { fetchData } from './utils/fetchData';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { setFilter  } from './utils/setFilter'
 
 export const ContextProvider = createContext(null)
 
@@ -14,10 +15,15 @@ export const ContextProvider = createContext(null)
 export const App = () => {
 
     const [matches, setMatches] = useState<MatchesData>({ok: false, once: true})
+    const [filter, setAppFilter] = useState({key: 'All', value: "Все"})
 
     const wrappedFetchData = async (data: MatchesData | null = matches) => {
         await fetchData(data, setMatches)
-    }                        
+    }
+    
+    const wrappedSetFilter = (value: string) => {
+        setFilter(value, setAppFilter)
+    }
     
     useEffect(() => {
         if(matches.once) {
@@ -52,7 +58,7 @@ export const App = () => {
         }, [])
 
     return (
-        <ContextProvider.Provider value={{matches, wrappedFetchData}}>
+        <ContextProvider.Provider value={{matches, filter, wrappedFetchData, wrappedSetFilter}}>
             <Header />
             <Router>
                 <Routes>

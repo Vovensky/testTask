@@ -19,7 +19,7 @@ export default function ContentPanelTest(props: Props) {
                 <TeamName teamName={match.awayTeam.name} />
                 <Score 
                     scoreData={[match.awayScore, match.homeScore]} 
-                    MatchStatus={<MatchStatus status={match.status === 'live'} />} />
+                    MatchStatus={<MatchStatus status={match.status === 'Ongoing'} />} />
                 <TeamName teamName={match.homeTeam.name} />
             </div>
         </div>

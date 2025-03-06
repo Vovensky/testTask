@@ -16,6 +16,7 @@
     font-size: 12px;
     line-height: 14.5px;
     border-radius: 5px;
+    transition: opacity 0.5s;
 }
 
 .matchStatus_score {
@@ -29,15 +30,20 @@
 }
 
 .matchStatus_live {
-    transition: opacity 0.5s;
+
     padding: 6px 34px;
     background-color: green;
 }
 
 .matchStatus_finished {
-    transition: opacity 0.5s;
+
     padding: 6px 21px;
     background-color: red;
+}
+
+.matchStatus_scheduled {
+    background-color: yellowgreen;
+    padding: 6px 21px;
 }
 
 .matchStatus_container {

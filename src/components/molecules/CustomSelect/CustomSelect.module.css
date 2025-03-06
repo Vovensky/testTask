@@ -1,0 +1,43 @@
+.customSelect {
+    position: relative;
+    color: rgba(180, 181, 182, 1);
+    background-color: rgba(11, 14, 18, 1);
+    width: 170px;
+}
+
+.customSelect__header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.customSelect__item {
+    font-family: 'Inter';
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 16px;
+    width: 100%;
+}
+
+.iconContainer {
+    width: 20px;
+    height: 20px;
+}
+
+.customSelect__body {
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    color: white;
+}
+
+.customSelect:hover {
+    cursor: pointer;
+}
+
+.customSelect:hover > .customSelect__body {
+    display: block;
+}
