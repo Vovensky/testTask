@@ -1,5 +1,4 @@
 import styles from './LayoutCell.module.css'
-import classes from '../../molecules/PlayersStat/PlayersStat.module.css'
 import { useState, useEffect } from 'react'
 
 type Props = {
@@ -22,7 +21,7 @@ export default function AdditionalInfo(props: Props) {
     const textAnimation = `${visible ? styles.text_visible : styles.text_hidden }`
 
     return (
-        <div className={`${styles.infoContainer} ${classes.statElement}`}>
+        <div className={styles.infoContainer}>
             <span className={styles.additionalInfo__label} >
                 {label}:
             </span>

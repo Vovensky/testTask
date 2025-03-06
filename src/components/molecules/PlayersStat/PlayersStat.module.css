@@ -12,7 +12,24 @@
 .statElement {
     display: flex;
     flex: 1;
-    padding: 8px 24px;
     gap: 8px;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+}
+
+@media screen and (max-width: 1680px) {
+    .statContainer {
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .statContainer {
+        flex-direction: row
+    }
+
+    .statElement {
+        flex-direction: column;
+        padding: 12px 7px;
+    }
 }

@@ -3,6 +3,14 @@
     max-width: 1920px;
     height: auto;
     position: relative;
-    margin: 85px auto;
+    margin: 0 auto;
     background-color: inherit;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mainLayout {
+        margin: 0;
+        padding: 0;
+    }
 }

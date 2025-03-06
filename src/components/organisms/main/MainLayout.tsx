@@ -14,8 +14,6 @@ export const MainLayout = (props: Props) => {
     const matches = props.matches
     const Component = props.Component
     const filter = useContext(ContextProvider).filter
-
-    console.log(`Filter`, filter)
     
         if(!matches.ok) {
             return (
@@ -37,9 +35,6 @@ export const MainLayout = (props: Props) => {
                 </div>
             )
         }
-
-        console.log(matches.data.
-            filter((element) => element.status === filter.key))
 
     return (
         <div className={styles.mainLayout}>

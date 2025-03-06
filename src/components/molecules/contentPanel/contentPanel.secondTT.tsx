@@ -29,19 +29,19 @@ export default function ContentPanelFinal(props: Props) {
 
     return (
         <div className={contentPanelStyled} onClick={() => setOpened(!opened)}>
-            <div className={styles.contentPanel__commonInfo}>
-                <TeamName teamName={match.awayTeam.name} />
-                <Score 
-                    scoreData={[match.awayScore, match.homeScore]} 
-                    MatchStatus={<MatchStatus status={match.status} />} />
-                <TeamName teamName={match.homeTeam.name} />
-                <div className={open}>
-                    <Arrow />
+                <div className={styles.contentPanel__commonInfo}>
+                    <TeamName teamName={match.awayTeam.name} />
+                    <Score 
+                        scoreData={[match.awayScore, match.homeScore]} 
+                        MatchStatus={<MatchStatus status={match.status} />} />
+                    <TeamName teamName={match.homeTeam.name} />
+                    <div className={open}>
+                        <Arrow />
+                    </div>
+                </div>
+                <div className={styles.contentPanel__additionalInfo}>
+                    <PlayerStat playersData={players} additionalData={props.match} />
                 </div>
             </div>
-            <div className={styles.contentPanel__additionalInfo}>
-                <PlayerStat playersData={players} additionalData={props.match} />
-            </div>
-        </div>
     )
 }

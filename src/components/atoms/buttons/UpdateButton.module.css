@@ -28,3 +28,14 @@
     width: 26px;
     height: 26px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .buttonWrapper {
+        width: 100%
+    }
+    
+    .updateButton {
+        width: 100%;
+    }
+}

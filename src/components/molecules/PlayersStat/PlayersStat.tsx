@@ -49,9 +49,15 @@ export default function PlayersStat(props: Props) {
                     {homePlayersStat}
                 </div>
                 <div className={styles.statContainer}>
-                    <AdditionalInfo label='Points:' value={additionalData.homeTeam.points} />
-                    <AdditionalInfo label='Всего убийств:' value={additionalData.homeTeam.total_kills} />
-                    <AdditionalInfo label='Место:' value={additionalData.homeTeam.place} />
+                    <div className={styles.statElement}>
+                        <AdditionalInfo label='Points:' value={additionalData.homeTeam.points} />
+                    </div>
+                    <div className={styles.statElement}>
+                        <AdditionalInfo label='Всего убийств:' value={additionalData.homeTeam.total_kills} />
+                    </div>
+                    <div className={styles.statElement}>
+                        <AdditionalInfo label='Место:' value={additionalData.homeTeam.place} />
+                    </div>
                 </div>
             </div>
             <div className={styles.teamCompound}>
@@ -59,9 +65,15 @@ export default function PlayersStat(props: Props) {
                     {awayPlayersStat}
                 </div>
                 <div className={styles.statContainer}>
-                    <AdditionalInfo label='Points:' value={additionalData.awayTeam.points} />
-                    <AdditionalInfo label='Всего убийств:' value={additionalData.awayTeam.total_kills} />
-                    <AdditionalInfo label='Место:' value={additionalData.awayTeam.place} />
+                    <div className={styles.statElement}>
+                        <AdditionalInfo label='Points:' value={additionalData.awayTeam.points} />
+                    </div>
+                    <div className={styles.statElement}>
+                        <AdditionalInfo label='Всего убийств:' value={additionalData.awayTeam.total_kills} />
+                    </div>
+                    <div className={styles.statElement}>
+                        <AdditionalInfo label='Место:' value={additionalData.awayTeam.place} />
+                    </div>
                 </div>
             </div>
         </>

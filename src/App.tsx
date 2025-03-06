@@ -59,14 +59,15 @@ export const App = () => {
 
     return (
         <ContextProvider.Provider value={{matches, filter, wrappedFetchData, wrappedSetFilter}}>
-            <Header />
-            <Router>
-                <Routes>
-                    <Route path='/' element={<MainLayout matches={matches} Component={ContentPanelTest}/>} />
-                    <Route path='/testtask-1' element={<MainLayout matches={matches} Component={ContentPanelTest} />} />
-                    <Route path='/testtask-2' element={<MainLayout matches={matches} Component={ContentPanelFinal} />} />
-                </Routes>
-            </Router>
+                <Header />
+                <Router>
+                    <Routes>
+                        <Route path='/' element={<MainLayout matches={matches} Component={ContentPanelTest}/>} />
+                        <Route path='/testtask-1' element={<MainLayout matches={matches} Component={ContentPanelTest} />} />
+                        <Route path='/testtask-2' element={<MainLayout matches={matches} Component={ContentPanelFinal} />} />
+                    </Routes>
+                </Router>
         </ContextProvider.Provider>
+
     )
 };

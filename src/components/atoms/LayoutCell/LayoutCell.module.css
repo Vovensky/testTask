@@ -53,6 +53,11 @@
 .infoContainer{
     display: flex;
     align-items: center;
+    flex: 1
+}
+
+.statContainer {
+    padding: 8px 24px
 }
 
 .info__playerName {
@@ -85,4 +90,14 @@
   
 .text_visible {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .additionalInfo__text, .info__playerName {
+        font-size: 14px;
+    }
+
+    .additionalInfo__label {
+        font-size: 12px;
+    } 
 }

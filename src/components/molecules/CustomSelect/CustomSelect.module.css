@@ -41,3 +41,10 @@
 .customSelect:hover > .customSelect__body {
     display: block;
 }
+
+
+@media screen and (max-width: 600px) {
+    .customSelect {
+        width: 100%;
+    }
+}
