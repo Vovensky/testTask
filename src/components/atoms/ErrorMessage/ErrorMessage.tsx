@@ -1,7 +1,7 @@
 import styles from './ErrorMessage.module.css'
-import ErrorIcon from '../../assets/ErrorIcon/ErrorIcon'
+import ErrorIcon from '@assets/ErrorIcon/ErrorIcon'
 import { useContext } from 'react'
-import { ContextProvider } from '../../../App'
+import { ContextProvider } from '@App/App'
 
 export default function ErrorMessage() {
 

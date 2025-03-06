@@ -1,10 +1,10 @@
 import { Match } from "../../../types/models"
 import styles from './contentPanel.module.css'
-import TeamName from "../../atoms/LayoutCell/LayoutCell.teamName"
-import Score from "../../atoms/LayoutCell/LayoutCell.score"
-import MatchStatus from "../../atoms/LayoutCell/LayoutCell.status"
+import TeamName from "@atoms/LayoutCell/LayoutCell.teamName"
+import Score from "@atoms/LayoutCell/LayoutCell.score"
+import MatchStatus from "@atoms/LayoutCell/LayoutCell.status"
 import PlayerStat from "../PlayersStat/PlayersStat"
-import Arrow from "../../assets/ArrowIcon/Arrow"
+import Arrow from "@assets/ArrowIcon/Arrow"
 import { useState } from "react"
 
 

@@ -1,6 +1,6 @@
-import UpdateIcon from '../../assets/UpdateIcon/UpdateIcon'
+import UpdateIcon from '@assets/UpdateIcon/UpdateIcon'
 import styles from './UpdateButton.module.css'
-import { ContextProvider } from '../../../App'
+import { ContextProvider } from '@App/App'
 import { useContext } from 'react'
 
 
@@ -13,7 +13,7 @@ export default function UpdateButton() {
             <button type='button' className={styles.updateButton}>
                 <span className={styles.updateButton_text}>Обновить</span>
                 <div className={styles.updateButton_icon}>
-                    <UpdateIcon opacity={0.5} />
+                    <UpdateIcon />
                 </div>
             </button>
         </div>

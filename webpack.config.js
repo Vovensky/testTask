@@ -19,7 +19,19 @@ module.exports = (env) => {
       clean: true,
     },
     resolve: {
-      extensions: [".tsx", ".ts", ".js"]
+      extensions: [".tsx", ".ts", ".js"],
+      alias: {
+        '@organisms': path.resolve(__dirname, 'src/components/organisms/'),
+        '@assets': path.resolve(__dirname, "src/components/assets"),
+        '@atoms': path.resolve(__dirname, 'src/components/atoms/'),
+        '@molecules': path.resolve(__dirname, 'src/components/molecules/'),
+        '@organisms': path.resolve(__dirname, 'src/components/organisms/'),
+        '@utils': path.resolve(__dirname, 'src/components/utils/'),
+        '@types': path.resolve(__dirname, 'src/components/types/'),
+        '@media': path.resolve(__dirname, 'src/../assets/'),
+        '@App': path.resolve(__dirname, 'src/')
+      }
+
     },
     module: {
       rules: [
@@ -88,7 +100,3 @@ module.exports = (env) => {
     },
   };
 }
-  
-
-
-console.log(process.env.REACT_APP_BASE_URL);

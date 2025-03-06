@@ -1,0 +1,13 @@
+.info__image {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.imageFrame {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: -5px
+}

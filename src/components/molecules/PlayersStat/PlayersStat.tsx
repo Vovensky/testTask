@@ -1,7 +1,7 @@
 import { Player, Match } from "../../../types/models"
 import styles from './PlayersStat.module.css'
-import PlayerInfo from "../../atoms/LayoutCell/LayoutCell.PlayerInfo"
-import AdditionalInfo from "../../atoms/LayoutCell/LayoutCell.additionalInfo"
+import PlayerInfo from "@atoms/LayoutCell/LayoutCell.PlayerInfo"
+import AdditionalInfo from "@atoms/LayoutCell/LayoutCell.additionalInfo"
 
 type Props = {
     playersData: {

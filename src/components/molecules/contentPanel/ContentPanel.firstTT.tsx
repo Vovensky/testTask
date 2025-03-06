@@ -1,8 +1,8 @@
 import { Match } from "../../../types/models"
 
-import MatchStatus from "../../atoms/LayoutCell/LayoutCell.status"
-import TeamName from "../../atoms/LayoutCell/LayoutCell.teamName"
-import Score from "../../atoms/LayoutCell/LayoutCell.score"
+import MatchStatus from "@atoms/LayoutCell/LayoutCell.status"
+import TeamName from "@atoms/LayoutCell/LayoutCell.teamName"
+import Score from "@atoms/LayoutCell/LayoutCell.score"
 import styles from "./contentPanel.module.css"
 
 type Props = {
@@ -19,7 +19,7 @@ export default function ContentPanelTest(props: Props) {
                 <TeamName teamName={match.awayTeam.name} />
                 <Score 
                     scoreData={[match.awayScore, match.homeScore]} 
-                    MatchStatus={<MatchStatus status={match.status === 'Ongoing'} />} />
+                    MatchStatus={<MatchStatus status={match.status} />} />
                 <TeamName teamName={match.homeTeam.name} />
             </div>
         </div>

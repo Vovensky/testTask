@@ -1,4 +1,4 @@
-import { ContextProvider } from '../../../App'
+import { ContextProvider } from '@App/App'
 import { useContext } from 'react'
 import { MatchesData } from '../../../types/models'
 import styles from './MainLayout.module.css'

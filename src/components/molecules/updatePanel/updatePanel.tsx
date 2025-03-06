@@ -1,6 +1,6 @@
 import styles from './updatePanel.module.css'
-import UpdateButton from '../../atoms/buttons/UpdateButton'
-import ErrorMessage from '../../atoms/ErrorMessage/ErrorMessage'
+import UpdateButton from '@atoms/buttons/UpdateButton'
+import ErrorMessage from '@atoms/ErrorMessage/ErrorMessage'
 
 export default function UpdatePanel() {
     return (

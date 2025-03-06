@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { ContextProvider } from "../../../App"
+import { ContextProvider } from "@App/App"
 import styles from './CustomSelect.module.css'
-import ArrowBottom from "../../assets/ArrowBottomIcon/ArrowBottom"
+import ArrowBottom from "@assets/ArrowBottomIcon/ArrowBottom"
 
 
 export default function CustomSelect() {

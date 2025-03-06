@@ -20,7 +20,17 @@
             {
               "name": "typescript-plugin-css-modules"
             }
-          ]
+          ],
+        "baseUrl": "src",
+        "paths": {
+          "@organisms/*": ["components/organisms/*"],
+          "@atoms/*": ["components/atoms/*"],
+          "@molecules/*": ["components/molecules/*"],
+          "@utils/*": ["components/utils/*"],
+          "@assets/*": ["components/assets/*"],
+          "@media": ["../assets/"],
+          "@App": ["./"]
+        }
     },
     "include": ["src/**/*", "declaration.d.ts"],
     "exclude": ["node_modules", "dist"]
