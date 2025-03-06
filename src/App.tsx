@@ -28,16 +28,29 @@ export const App = () => {
             wrappedFetchData(null)
         }
 
-        // let newSocket = new WebSocket(`${process.env.SOCKET_URL}`)
+        let newSocket = new WebSocket(`${process.env.SOCKET_URL}`)
 
-        // newSocket.onopen = () => { useCallback, 
-        //     console.error('WebSocket error:', error);
-        //   };
+        newSocket.onopen = () => {
+            console.log('Connected');
+          };
 
-        // return () => {
-        //     console.log(`destruction`)
-        //     newSocket.close();
-        //   };
+        newSocket.onmessage = (event) => {
+            const data: MatchesData = JSON.parse(event.data)
+            setMatches({ok: true, data: data.data})
+          };
+      
+        newSocket.onclose = () => {
+            console.log('Disconnect');
+          };
+      
+        newSocket.onerror = (error) => {
+            setMatches({ok: true, message: 'Something go wrong', data: []})
+            console.error('WebSocket error:', error);
+          };
+
+        return () => {
+            newSocket.close();
+          };
 
         }, [])
 

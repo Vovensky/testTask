@@ -1,6 +1,6 @@
 import UpdateIcon from '@assets/UpdateIcon/UpdateIcon'
 import styles from './UpdateButton.module.css'
-import { ContextProvider } from '@App/App'
+import { ContextProvider } from '../../../App'
 import { useContext } from 'react'
 
 
